@@ -1,0 +1,49 @@
+
+body {
+	font-family: "Raleway";
+	background-color: #5095ba;
+	color: white;
+}
+
+h1 {
+	padding-top: 3%;
+	text-align: center;
+}
+
+h2 {
+	text-align: left;
+	font-weight: 400;
+	margin-left: 45px;
+}
+
+.choices {
+	padding: 3%;
+	background-color: #061e44;
+	margin: 3%;
+}
+
+.choices:hover {
+	background-color: rgba(2, 247, 200, 0.3);
+	box-shadow: inset 0 0 0 3px #f7f201;
+	transition: 0.3s;
+}
+
+#scoreDisplay {
+	display: inline-block;
+}
+
+#yes {
+	float: right;
+	margin-right: 10%;
+	font-size: 2rem;
+	color: yellow;
+	display: none;
+}
+
+#no {
+	float: right;
+	margin-right: 10%;
+	font-size: 2rem;
+	color: red;
+	display: none;
+}
