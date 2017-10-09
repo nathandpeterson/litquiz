@@ -1,13 +1,27 @@
-var score = 0;
-var scoreDisplay = document.querySelector("#scoreDisplay");
-var q = document.querySelector("#q");
-var choices = document.querySelectorAll(".choices");
+let score = 0;
+const scoreDisplay = document.querySelector("#scoreDisplay")
+const question = document.querySelector("#question")
+const choices = document.querySelectorAll(".choices")
+const background = document.querySelector('.container')
+
+const setBackgroundColor = function(e){
+  if(e){
+    background.style.background = 'yellow'
+  } else {
+    background.style.background = 'orange'
+  }
+  setTimeout(resetBackgroundColor, 1000)
+}
+
+const resetBackgroundColor = function(){
+  background.style.background = '#62B6CB'
+}
 
 $(".answers").click(function(e) {
   var classes = e.target.classList.value;
-
   if (classes.includes("correct")) {
     score += 100;
+    setBackgroundColor(e);
     $(function() {
       $('#yes').fadeIn('normal', function() {
       $(this).delay(100).fadeOut();
@@ -20,12 +34,13 @@ $(function() {
    });
 });
     score -= 50;
+      setBackgroundColor();
   }
   scoreDisplay.textContent = score;
   reset();
 });
 
-//randomly pick next question from var questions & display question
+//randomly pick next question from questions & display question
 function reset() {
   var nextQNum = Math.floor(Math.random() * questions.length);
   var nextQ = questions[nextQNum].question;
@@ -37,10 +52,10 @@ function reset() {
   addClasses(nextQNum);
 }
 // add correct class to
-function addClasses(ind) {
-  var multChoices = questions[ind].choices;
-  var answerInd = questions[ind].correct;
-  var answer = questions[ind].choices[answerInd];
+function addClasses(index) {
+  var multChoices = questions[index].choices;
+  var answerInd = questions[index].correct;
+  var answer = questions[index].choices[answerInd];
 
   for (i = 0; i < multChoices.length; i++) {
     choices[i].classList = ["choices"];
@@ -49,7 +64,7 @@ function addClasses(ind) {
   }
 }
 
-var questions = [
+const questions = [
   {
     question: "Who is the author of <em>A Tale of Two Cities</em>?",
     choices: [

@@ -1,7 +1,7 @@
 
 body {
 	font-family: "Raleway";
-	background-color: #5095ba;
+	background-color: #62B6CB;
 	color: white;
 }
 
@@ -18,14 +18,16 @@ h2 {
 
 .choices {
 	padding: 3%;
-	background-color: #061e44;
-	margin: 3%;
+	background-color: #71F79F;
+	margin: 3% 10%;
+	border-radius: 3px;
 }
 
 .choices:hover {
-	background-color: rgba(2, 247, 200, 0.3);
-	box-shadow: inset 0 0 0 3px #f7f201;
+	background-color: rgba(255,136,17, 0.9);
+	box-shadow: inset 0 0 0 3px rgba(245,245,245, 0.7);
 	transition: 0.3s;
+	color: white;
 }
 
 #scoreDisplay {
