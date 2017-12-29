@@ -10,16 +10,6 @@ const emptyQuestion = {
 const questions =
 [
   {
-    question: "Who is the author of <em>A Tale of Two Cities</em>?",
-    choices: [
-      "Charles Dickens",
-      "Jane Austen",
-      "Daniel Defoe",
-      "Arthur Conan Doyle"
-    ],
-    correct: 0
-  },
-  {
     question:
       "Who is the narrator of F. Scott Fitzgerald's <em>The Great Gatsby</em>?",
     choices: [
